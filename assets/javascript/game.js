@@ -9,15 +9,17 @@
     // Computer picks from this array of letters
     var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l' , 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     var randomComputerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
-
-    // when user types a key...
-     document.onkeyup=function(event) {      
+    var arrGuesses = []; // an array of the guesses so far...
+    
+     document.onkeyup=function(event) {     // when user types a key... 
         var userChoice = event.key; // user input is saved as var userChoice
-        
+        arrGuesses.push(userChoice);
+
         // Stats display
         document.getElementById("guessesText").innerHTML = "Tries remaining: " + tries;
         document.getElementById("winsText").innerHTML = "Wins: " + wins;
         document.getElementById("lossText").innerHTML = "Losses: " + losses;
+        document.getElementById("yourGuesses").innerHTML = "Your guesses: " + arrGuesses;
 
         // run through the game
             if (tries == 0)

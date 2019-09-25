@@ -12,7 +12,7 @@
     var arrGuesses = []; // an array of the guesses so far...
     
      document.onkeyup=function(event) {     // when user types a key... 
-        var userChoice = event.key; // user input is saved as var userChoice
+        var userChoice = event.key.toLowerCase(); // user input is saved as var userChoice
         arrGuesses.push(userChoice); // adds the user's letter into the array
 
         // Stats display

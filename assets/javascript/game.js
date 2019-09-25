@@ -20,6 +20,7 @@
         document.getElementById("winsText").innerHTML = "Wins: " + wins;
         document.getElementById("lossText").innerHTML = "Losses: " + losses;
         document.getElementById("yourGuesses").innerHTML = "Your guesses: " + arrGuesses;
+        
 
         // run through the game
             if (tries === 1)

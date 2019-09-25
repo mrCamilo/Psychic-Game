@@ -22,19 +22,21 @@
         document.getElementById("yourGuesses").innerHTML = "Your guesses: " + arrGuesses;
 
         // run through the game
-            if (tries == 0)
+            if (tries == 1)
             {
-                losses +=1; // add a loss once the condition is met (tries are at 0)
-                tries = 9; // once tries hits zero reset tries back to 9.
+                losses +=1; // add a loss once the condition is met (tries are at 0)             
+                tries = 9; // once tries hits zero, reset tries back to 9.
+                arrGuesses = []; // reset the array of guesses           
             }
             else if (randomComputerChoice != userChoice)
-            {          
-                
+            {                         
                 tries -=1; // decrease number of attempts every incorrect guess
                 numGuesses++; // count number of guesses
             }
             else {
-                 wins++;
+                 arrGuesses = []; // reset the array of guesses
+                 wins++; // add a W.
+                 tries = 9; // once tries hits zero, reset tries back to 9.          
             }
 
     }

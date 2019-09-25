@@ -32,11 +32,12 @@
             {                         
                 tries -=1; // decrease number of attempts every incorrect guess
                 numGuesses++; // count number of guesses
+                arrGuesses = []; // reset the array of guesses
             }
             else {
-                 arrGuesses = []; // reset the array of guesses
                  wins++; // add a W.
-                 tries = 9; // once tries hits zero, reset tries back to 9.          
+                 tries = 9; // once tries hits zero, reset tries back to 9.
+                 arrGuesses = []; // reset the array of guesses          
             }
 
     }

@@ -4,7 +4,7 @@
     // variables start off at 0 wins and losses and 9 tries
     var wins = 0;
     var losses = 0;
-    var tries = 9;
+    var tries = 8;
 
     // Computer picks from this array of letters
     var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l' , 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -22,13 +22,13 @@
         document.getElementById("yourGuesses").innerHTML = "Your guesses: " + arrGuesses;
 
         // run through the game
-            if (tries == 1)
+            if (tries === 1)
             {
                 losses += 1; // add a loss once the condition is met (tries are at 0)             
                 tries = 9; // once tries hits zero, reset tries back to 9.
                 arrGuesses = []; // reset the array of guesses           
             }
-            else if (randomComputerChoice != userChoice)
+            else if (randomComputerChoice !== userChoice)
             {                         
                 tries -=1; // decrease number of attempts every incorrect guess
                 numGuesses++; // count number of guesses

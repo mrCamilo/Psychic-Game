@@ -13,7 +13,12 @@
     // when user types a key...
      document.onkeyup=function(event) {      
         var userChoice = event.key; // user input is saved as var userChoice
-          
+        
+        // Stats display
+        document.getElementById("guessesText").innerHTML = "Tries remaining: " + tries;
+        document.getElementById("winsText").innerHTML = "Wins: " + wins;
+        document.getElementById("lossText").innerHTML = "Losses: " + losses;
+
         // run through the game
             if (tries == 0)
             {
@@ -22,15 +27,17 @@
             }
             else if (randomComputerChoice != userChoice)
             {          
-                document.getElementById("guessesText").innerHTML = "Tries remaining: " + tries;
-                tries -=1;
+                
+                tries -=1; // decrease number of attempts every incorrect guess
                 numGuesses++; // count number of guesses
             }
-            else {
-                 
-                // document.getElementById("lossText").innerHTML = "You lose!";
+            else if (randomComputerChoice == userChoice)
+            {
                 document.getElementById("winText").innerHTML = "You win!";
-                document.write("epic");
+                wins++;
+            }
+            else {
+                 wins++;
             }
 
     }

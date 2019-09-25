@@ -1,7 +1,7 @@
     // Directions!
     document.getElementById("directions").innerHTML = "Guess what letter I'm thinking of... type any letter from a-z! You get 9 guesses!";
 
-    // variables start off at 0 wins and losses
+    // variables start off at 0 wins and losses and 9 tries
     var wins = 0;
     var losses = 0;
     var tries = 9;
@@ -24,7 +24,7 @@
         // run through the game
             if (tries == 1)
             {
-                losses +=1; // add a loss once the condition is met (tries are at 0)             
+                losses += 1; // add a loss once the condition is met (tries are at 0)             
                 tries = 9; // once tries hits zero, reset tries back to 9.
                 arrGuesses = []; // reset the array of guesses           
             }

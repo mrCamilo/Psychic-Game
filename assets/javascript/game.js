@@ -15,9 +15,13 @@
         var userChoice = event.key; // user input is saved as var userChoice
           
         // run through the game
-        // for (var numGuesses = 5; numGuesses >= 0; numGuesses--) {
-            if (randomComputerChoice != userChoice)
+            if (tries == 0)
             {
+                losses +=1;
+                tries = 9; // once attempts hits zero, reset it back to 9.
+            }
+            else if (randomComputerChoice != userChoice)
+            {          
                 document.getElementById("guessesText").innerHTML = "Tries remaining: " + tries;
                 tries -=1;
                 numGuesses++; // count number of guesses
@@ -28,7 +32,6 @@
                 document.getElementById("winText").innerHTML = "You win!";
                 document.write("epic");
             }
-     // }
 
     }
 

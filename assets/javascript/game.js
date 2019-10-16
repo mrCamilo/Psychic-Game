@@ -1,5 +1,5 @@
     // Directions!
-    // document.getElementById("directions").innerHTML = "Guess what letter I'm thinking of... type any letter from a-z! You get 9 guesses!";
+    document.getElementById("directions").innerHTML = "Guess what letter I'm thinking of... type any letter from a-z! You get 9 guesses!";
 
     // variables start off at 0 wins and losses and 9 tries
     var wins = 0;
